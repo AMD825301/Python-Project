@@ -1,0 +1,19 @@
+def selectionSort(lst):
+    for i in range(len(lst)):
+
+        minimum = i
+
+        for j in range(i + 1, len(lst)):
+            if lst[j] < lst[minimum]:
+                minimum = j
+
+        temp = lst[i]
+        lst[i] = lst[minimum]
+        lst[minimum] = temp
+
+    return lst
+
+
+x = [10, 83, 20, 30, 5]
+print(selectionSort(x))
+
